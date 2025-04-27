@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import './App.css';
 import { FaLinkedin, FaGithub, FaSlack, FaInstagram } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
+import Project from './project'
 
 
 function App() {
@@ -233,6 +234,8 @@ function App() {
           </div>
         </div>
       </section>
+
+      <Project/>
 
       <section id="contact" className="contact">
         <h2 className="section-title">Get in Touch</h2>
