@@ -103,7 +103,7 @@ function App() {
             repeat={Infinity} // Loop the animation infinitely
             cursor={false}
           /></h1>
-          <p className="home-subtitle">React Full Stack Developer</p>
+          <p className="home-subtitle">React Developer</p>
           <p className="home-description">
             I create beautiful and functional web applications with modern technologies and best practices.
             Let's work together to bring your ideas to life.
@@ -126,7 +126,7 @@ function App() {
         <p className="section-subtitle">Discover my journey and expertise</p>
         
         <p className="about-content">
-          Hi, I'm <strong>Khadar Basha Shaik</strong>, a passionate <strong>React Full Stack Developer</strong> with <strong>3 years of experience</strong> in building dynamic, scalable, and user-friendly web applications. My expertise includes <strong>JavaScript, React</strong>, and modern UI libraries like <strong>Material UI</strong> and <strong>Chakra UI</strong>.<br /><br />
+          Hi, I'm <strong>Khadar Basha Shaik</strong>, a passionate <strong>React Developer</strong> with <strong>3 years of experience</strong> in building dynamic, scalable, and user-friendly web applications. My expertise includes <strong>JavaScript, React</strong>, and modern UI libraries like <strong>Material UI</strong> and <strong>Chakra UI</strong>.<br /><br />
 
           I specialize in developing <strong>high-performance applications</strong> with clean, maintainable code. With a strong focus on <strong>intuitive UI and full-stack development</strong>, I turn complex requirements into scalable solutions. Always eager to learn and adapt to new technologies, I thrive on <strong>challenging projects</strong> that drive innovation and real-world impact. 🚀
         </p>   
@@ -174,7 +174,7 @@ function App() {
         <div className={`tab-content ${activeTab === 'experience' ? 'active' : ''}`}>
           <div className="experience-timeline">
             <div className="experience-item">
-              <h3>React Full Stack Developer</h3>
+              <h3>React Developer</h3>
               <p className="company"><b>ETG Digital</b></p>
               <p className="period"><b>2022 - Present</b></p>
               <p>At ETG Digital, I played a key role in developing a PWA Accelerator built on React, enhancing performance and user engagement. I worked on Reformation and Cavenders websites, leveraging Progressive Web App (PWA) technologies to create fast, reliable, and engaging web experiences. My contributions included:</p>
