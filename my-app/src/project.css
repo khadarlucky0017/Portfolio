@@ -1,65 +1,87 @@
 .projects {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .section-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-  }
-  
-  .project-card {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .project-box {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    max-width: 300px;
-    background-color: #fff;
-  }
-  
-  .project-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-thumbnail {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .project-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .project-description {
-    font-size: 1rem;
-    color: #666;
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+/* ===== Projects Grid ===== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* ===== Project Card ===== */
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Project Content ===== */
+
+.project-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+.project-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.project-tech {
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 70px 6%;
   }
 
-  .project-card a {
-    text-decoration: none; /* Remove underline from the link */
+  .section-title {
+    font-size: 34px;
   }
-  
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+}
