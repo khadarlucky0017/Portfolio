@@ -36,7 +36,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       await emailjs.send(
         'service_2hlg1yi', // Replace with your EmailJS service ID
@@ -52,7 +52,7 @@ function App() {
 
       setShowPopup(true);
       setFormData({ name: '', email: '', message: '' });
-      
+
       setTimeout(() => {
         setShowPopup(false);
       }, 3000);
@@ -63,7 +63,7 @@ function App() {
   };
 
   const handleViewResume = () => {
-    const resumeUrl = 'https://drive.google.com/file/d/17Vsac-yla0pIp84yBZtq4j_NcP9Et-7H/view?usp=drive_link';
+    const resumeUrl = 'https://drive.google.com/file/d/1ba8FamIOsZxweTxsZ9XzeRnIFEotToIb/view?usp=sharing';
     window.open(resumeUrl, '_blank');
   };
 
@@ -75,7 +75,7 @@ function App() {
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-content">
-          <a href="#home" className="nav-brand">ByteCraft by Khadar 🚀</a>
+          <a href="#home" className="nav-brand">ByteCraft by Khadar</a>
           <button className="menu-toggle" onClick={toggleMenu}>
             <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
           </button>
@@ -103,18 +103,19 @@ function App() {
             repeat={Infinity} // Loop the animation infinitely
             cursor={false}
           /></h1>
-          <p className="home-subtitle">React Developer</p>
+          <p className="home-subtitle">Frontend Developer | React JS</p>
           <p className="home-description">
-            I create beautiful and functional web applications with modern technologies and best practices.
+            I build high-performance, responsive web applications with a strong focus on user experience.
+            Specialized in React, Next.js, and Modern Javascript to building high-performance, accessible web experiences. <br></br>
             Let's work together to bring your ideas to life.
           </p>
           <a href="#contact" className="cta-button">Get in Touch</a>
         </div>
         <div className="home-image">
           <div className="profile-img-container">
-            <img 
-              src="/Khadar17.jpg" 
-              alt="Profile" 
+            <img
+              src="/Khadar17.jpg"
+              alt="Profile"
               className="profile-img"
             />
           </div>
@@ -124,26 +125,26 @@ function App() {
       <section id="about" className="about">
         <h2 className="section-title">About Me</h2>
         <p className="section-subtitle">Discover my journey and expertise</p>
-        
-        <p className="about-content">
-          Hi, I'm <strong>Khadar Basha Shaik</strong>, a passionate <strong>React Developer</strong> with <strong>3 years of experience</strong> in building dynamic, scalable, and user-friendly web applications. My expertise includes <strong>JavaScript, React</strong>, and modern UI libraries like <strong>Material UI</strong> and <strong>Chakra UI</strong>.<br /><br />
 
-          I specialize in developing <strong>high-performance applications</strong> with clean, maintainable code. With a strong focus on <strong>intuitive UI and full-stack development</strong>, I turn complex requirements into scalable solutions. Always eager to learn and adapt to new technologies, I thrive on <strong>challenging projects</strong> that drive innovation and real-world impact. 🚀
-        </p>   
+        <p className="about-content">
+          Hi, I'm <strong>Khadar Basha Shaik</strong>, a <strong>Frontend Developer</strong> with <strong>4 years of experience</strong> building scalable, high-performance web applications using <strong>React.js, Next.js, and TypeScript</strong>. I specialize in responsive UI development, reusable component architecture, and e-commerce workflows.<br /><br />
+
+          My expertise includes <strong>accessibility standards (WCAG 2.1), Core Web Vitals optimization, and SEO best practices</strong>. I'm passionate about writing clean, maintainable code and delivering seamless user experiences. With a strong focus on performance optimization and full-stack development, I turn complex requirements into scalable solutions. Always eager to learn and adapt to new technologies, I thrive on challenging projects that drive innovation and real-world impact.
+        </p>
         <div className="tabs">
-          <button 
+          <button
             className={`tab ${activeTab === 'skills' ? 'active' : ''}`}
             onClick={() => setActiveTab('skills')}
           >
             Skills & Expertise
           </button>
-          <button 
+          <button
             className={`tab ${activeTab === 'experience' ? 'active' : ''}`}
             onClick={() => setActiveTab('experience')}
           >
             Work Experience
           </button>
-          <button 
+          <button
             className={`tab ${activeTab === 'education' ? 'active' : ''}`}
             onClick={() => setActiveTab('education')}
           >
@@ -156,17 +157,27 @@ function App() {
             <div className="skill-item">
               <div className="skill-icon">🌐</div>
               <h3>Frontend Development</h3>
-              <p>React, JavaScript, HTML5, CSS3</p>
+              <p>React, JavaScript, Next.js, HTML5, CSS3</p>
             </div>
             <div className="skill-item">
               <div className="skill-icon">🎨</div>
               <h3>UI Libraries</h3>
-              <p>material UI, Chakra UI</p>
+              <p>material UI, Chakra UI, Tailwind CSS</p>
             </div>
             <div className="skill-item">
               <div className="skill-icon">⚙️</div>
-              <h3>Development Tools</h3>
-              <p>Git, NPM (Package Managers), Chrome DevTools (Debugging)</p>
+              <h3>State Management & API</h3>
+              <p>Redux Toolkit, React Query, REST APIs, Axios, Fetch</p>
+            </div>
+            <div className="skill-item">
+              <div className="skill-icon">📊</div>
+              <h3>Performance & SEO</h3>
+              <p>Core Web Vitals, Lighthouse, Accessibility (WCAG 2.1), SEO Optimization</p>
+            </div>
+            <div className="skill-item">
+              <div className="skill-icon">🛠️</div>
+              <h3>Developer Tools</h3>
+              <p>Git, GitHub, VS Code, Chrome DevTools, Postman</p>
             </div>
           </div>
         </div>
@@ -174,15 +185,34 @@ function App() {
         <div className={`tab-content ${activeTab === 'experience' ? 'active' : ''}`}>
           <div className="experience-timeline">
             <div className="experience-item">
-              <h3>React Developer</h3>
-              <p className="company"><b>ETG Digital</b></p>
-              <p className="period"><b>2022 - Present</b></p>
-              <p>At ETG Digital, I played a key role in developing a PWA Accelerator built on React, enhancing performance and user engagement. I worked on Reformation and Cavenders websites, leveraging Progressive Web App (PWA) technologies to create fast, reliable, and engaging web experiences. My contributions included:</p>
+              <h3>Frontend Developer</h3>
+              <p className="company"><b>Cloud Peritus</b></p>
+              <p className="period"><b>Aug 2025 - Present</b></p>
+              <p>Currently developing high-performance e-commerce applications with focus on accessibility and performance optimization.</p>
               <ul>
-              <li>Worked on RESTful APIs, managing both server-side and client-side development</li>
-              <li>Utilized React Hooks for efficient state management and component lifecycle handling</li>
-              <li>Refactoring and optimizing code to improve maintainability and scalability.</li>
-              <li>Developing dynamic and interactive UI components using React, Material UI, and Chakra UI.</li>
+                <li>Developed mini-cart functionality with React state management and API integration</li>
+                <li>Built reusable UI components using React and Chakra UI with TypeScript type safety</li>
+                <li>Built and optimized product listing page filters to improve user experience</li>
+                <li>Integrated REST APIs using Axios and Fetch with proper error handling</li>
+                <li>Enhanced frontend accessibility by implementing WCAG 2.1 standards using semantic HTML and ARIA roles</li>
+                <li>Improved Core Web Vitals by optimizing LCP, CLS, and INP metrics</li>
+              </ul>
+            </div>
+            <div className="experience-item">
+              <h3>Frontend Developer</h3>
+              <p className="company"><b>ETG Digital</b></p>
+              <p className="period"><b>Aug 2022 - Aug 2025</b></p>
+              <p>Led frontend development on major e-commerce projects, building scalable PWA applications and optimizing performance.</p>
+              <ul>
+                <li>Improved application performance through lazy loading, code splitting, and rendering optimization</li>
+                <li>Built reusable UI components and optimized frontend architecture for large-scale applications</li>
+                <li>Integrated REST APIs and handled asynchronous data flows efficiently</li>
+                <li>Implemented social authentication flows (Google, Facebook login)</li>
+                <li>Implemented Google Tag Manager event tracking, capturing 50K+ daily user interactions</li>
+                <li>Developed Product Listing Page (PLP) with advanced filtering and infinite scroll</li>
+                <li>Achieved 85% unit test coverage using Jest and React Testing Library</li>
+                <li>Implemented SEO enhancements with semantic HTML5 and dynamic meta tags</li>
+                <li>Collaborated with designers to translate Figma designs into pixel-perfect React components</li>
               </ul>
             </div>
           </div>
@@ -216,26 +246,40 @@ function App() {
       <section id="services" className="services">
         <h2 className="section-title">My Services</h2>
         <p className="section-subtitle">What I can do for you</p>
-        
+
         <div className="services-grid">
           <div className="service-card">
             <div className="service-icon">💻</div>
             <h3 className="service-title">Web Development</h3>
             <p className="service-description">
-              Custom web applications built with modern frameworks and best practices
+              Custom web applications built with React, Next.js, and modern frameworks with best practices
+            </p>
+          </div>
+          <div className="service-card">
+            <div className="service-icon">⚡</div>
+            <h3 className="service-title">Performance Optimization</h3>
+            <p className="service-description">
+              Optimize Core Web Vitals, improve Lighthouse scores, and enhance user experience
             </p>
           </div>
           <div className="service-card">
             <div className="service-icon">🎨</div>
-            <h3 className="service-title">UI Design</h3>
+            <h3 className="service-title">UI/UX Design</h3>
             <p className="service-description">
-              Intuitive and beautiful user interfaces with great user experience
+              Responsive, accessible, and beautiful user interfaces with WCAG 2.1 standards
+            </p>
+          </div>
+          <div className="service-card">
+            <div className="service-icon">♿</div>
+            <h3 className="service-title">Accessibility (WCAG)</h3>
+            <p className="service-description">
+              Implement WCAG 2.1 standards, semantic HTML, and full keyboard navigation support
             </p>
           </div>
         </div>
       </section>
 
-      <Project/>
+      <Project />
 
       <section id="contact" className="contact">
         <h2 className="section-title">Get in Touch</h2>
@@ -248,7 +292,7 @@ function App() {
               I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
             </p>
             <button onClick={handleViewResume} className="download-resume-btn">
-            View My Resume
+              View My Resume
             </button>
           </div>
 
